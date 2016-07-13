@@ -1,5 +1,10 @@
 {
   "name": "maas-tsp-reference",
-  "custom": {},
-  "plugins": ["serverless-cors-plugin"]
+  "custom": {
+    "meta": {
+      "name": "maas-tsp-reference",
+      "region": "eu-west-1"
+    }
+  },
+  "plugins": ["serverless-cors-plugin","serverless-meta-sync"]
 }
