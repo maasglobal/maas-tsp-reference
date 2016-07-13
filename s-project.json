@@ -1,0 +1,5 @@
+{
+  "name": "maas-tsp-reference",
+  "custom": {},
+  "plugins": ["serverless-cors-plugin"]
+}
