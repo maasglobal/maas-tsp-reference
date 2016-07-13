@@ -39,5 +39,5 @@ node_modules
 admin.env
 .env
 
-#Ignore _meta folder
-_meta
+#Ignore syncable configs from the _meta folder
+_meta/variables/s-variables-dev.json

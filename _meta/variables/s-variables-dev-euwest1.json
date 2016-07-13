@@ -1,0 +1,6 @@
+{
+  "region": "eu-west-1",
+  "resourcesStackName": "maas-tsp-reference-dev-r",
+  "iamRoleArnLambda": "arn:aws:iam::756207178743:role/maas-tsp-reference-dev-r-IamRoleLambda-BXKF52FEZJ43",
+  "apiGatewayApi": "maas-tsp-reference"
+}
