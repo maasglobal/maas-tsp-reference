@@ -2,11 +2,11 @@
 
 module.exports.respond = function(event, cb) {
   // Copy the body, alter state, inject meta
-  var body = event.body;
+  var body = event;
   var now = Date.now();
   var newData = {
-    id: 'tsp-' + event.body.bookingId,
-    bookingId: event.body.bookingId,
+    id: 'tsp-' + body.bookingId,
+    bookingId: body.bookingId,
     state: 'RESERVED',
     token: {
       validityDuration: {
