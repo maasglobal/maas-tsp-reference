@@ -5,14 +5,16 @@ module.exports.respond = function(event, cb) {
   var body = event;
   var now = Date.now();
   var newData = {
-    id: 'tsp-' + body.bookingId,
-    bookingId: body.bookingId,
+    tspId: 'tsp-' + body.bookingId,
     state: 'RESERVED',
     token: {
       validityDuration: {
         from: now,
         to: now + 60*60*1000,
       }
+    },
+    terms: {
+      todo: "example terms",
     },
     meta: {
       string: 'Retain this string accross requests',
