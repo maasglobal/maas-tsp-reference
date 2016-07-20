@@ -6,5 +6,9 @@
       "region": "eu-west-1"
     }
   },
-  "plugins": ["serverless-cors-plugin","serverless-meta-sync"]
+  "plugins": [
+    "serverless-cors-plugin",
+    "serverless-plugin-function-integration-run",
+    "serverless-meta-sync"
+  ]
 }

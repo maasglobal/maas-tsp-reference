@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "serverless-cors-plugin": "^0.4.1",
+    "serverless-plugin-function-integration-run": "^0.1.0",
     "serverless-meta-sync": "^0.1.0"
   }
 }
