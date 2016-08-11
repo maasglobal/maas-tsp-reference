@@ -7,8 +7,8 @@ module.exports.respond = function(event, cb) {
   const customer = event.customer || {};
   const leg = event.leg || {};
   request.post('https://api.dev.maas.global/tickets', { json: 1, body: {
-    issuerId: 'HSL',
-    issuerKey: 'secret!',
+    partnerId: 'HSL',
+    partnerKey: 'secret!',
     startTime: leg.startTime,
     endTime: leg.endTime,
     ownerName: [customer.firstName, customer.lastName].filter(n => n).join(' '),
