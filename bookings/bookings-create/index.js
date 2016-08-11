@@ -17,6 +17,8 @@ module.exports.respond = function(event, cb) {
     }
   } } )
     .then( response => {
+      const default_meta = {};
+      default_meta[ 'MODE_' + leg.mode ] = {};
       var output = {
         tspId: response.ticketId,
         state: 'RESERVED',
@@ -35,7 +37,7 @@ module.exports.respond = function(event, cb) {
             currency: 'EUR',
           },
         },
-        meta: Object.assign( {}, event.meta || {}, { MODE_MAAS_TRIP: {} } ),
+        meta: Object.assign( default_meta, event.meta || {} ),
       };
 
       return cb(null, output);
