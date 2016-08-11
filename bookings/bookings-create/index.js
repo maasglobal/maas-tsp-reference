@@ -25,7 +25,7 @@ module.exports.respond = function(event, cb) {
           value: response.ticket,
         },
         leg: {
-          mode: 'MAAS_TRIP',
+          mode: leg.mode,
           startTime: leg.startTime,
           endTime: leg.endTime,
         },
