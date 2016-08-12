@@ -26,7 +26,8 @@
       "requestParameters": {},
       "application/json": {
         "leg": "$input.json('$.leg')",
-        "customer": "$input.json('$.customer')"
+        "customer": "$input.json('$.customer')",
+        "meta": "$input.json('$.meta')"
       },
       "responses": {
         "default": {
