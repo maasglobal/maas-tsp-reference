@@ -6,8 +6,8 @@ module.exports.respond = function(event, cb) {
   // NOTE: This is completely mocked. Just token validity is updated.
   const now = new Date();
   const delta = {
-    id: '' + event.id,
-    state: 'PAID',
+    tspId: '' + event.tspId,
+    state: 'RESERVED',
     token: {
       validityDuration: {
         from: now,

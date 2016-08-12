@@ -1,38 +1,32 @@
 {
-  "query": {
-    "foo": "bar"
-  },
-  "body": {
-    "bookingId": "foo-bar-baz",
-    "state": "NEW",
-    "leg": {
-      "startTime": 1458832380000,
-      "endTime": 1458832800000,
-      "mode": "TRAM",
-      "from": {
-        "name": "Töölöntori",
-        "lon": 24.92371,
-        "lat": 60.17971
-      },
-      "to": {
-        "name": "Helsinginkatu",
-        "lon": 24.95391,
-        "lat": 60.18708
-      },
-      "route": "8",
-      "routeShortName": "8",
-      "routeLongName": "Jätkäsaari - Töölö - Arabia",
-      "agencyId": "HSL",
-      "fare": {
-        "co2": 0
-      },
-      "id": "a3e4431e1f634c3bc5d2ca5db341092e94bdbe4d41e191a25bd1c5f6e4643943"
+  "leg": {
+    "startTime": 1458832380000,
+    "endTime": 1458832800000,
+    "mode": "TRAM",
+    "from": {
+      "name": "Töölöntori",
+      "lon": 24.92371,
+      "lat": 60.17971
     },
-    "customer": {
-      "id": "1234",
-      "firstName": "John",
-      "lastName": "Doe",
-      "phone": "+358501234567"
-    }
+    "to": {
+      "name": "Helsinginkatu",
+      "lon": 24.95391,
+      "lat": 60.18708
+    },
+    "route": "8",
+    "routeShortName": "8",
+    "routeLongName": "Jätkäsaari - Töölö - Arabia",
+    "agencyId": "HSL",
+    "fare": {
+      "co2": 0
+    },
+    "id": "a3e4431e1f634c3bc5d2ca5db341092e94bdbe4d41e191a25bd1c5f6e4643943"
+  },
+  "customer": {
+    "firstName": "Jane",
+    "lastName": "Maas",
+    "title": "ms",
+    "phone": "010 2345678",
+    "email": "jane.maas@example.com"
   }
 }

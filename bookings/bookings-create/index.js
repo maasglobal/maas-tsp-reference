@@ -5,7 +5,7 @@ module.exports.respond = function(event, cb) {
   var body = event;
   var now = Date.now();
   var newData = {
-    tspId: 'tsp-' + body.bookingId,
+    tspId: 'tsp-' + Date.now(),
     state: 'RESERVED',
     token: {
       validityDuration: {

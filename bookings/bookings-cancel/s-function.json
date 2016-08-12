@@ -1,7 +1,6 @@
 {
-  "name": "bookings-retrieve",
+  "name": "bookings-cancel",
   "runtime": "nodejs4.3",
-  "description": "Retrieves a delta of an existing Booking from the TSP.",
   "customName": false,
   "customRole": false,
   "handler": "handler.handler",
@@ -9,15 +8,19 @@
   "memorySize": 1024,
   "authorizer": {},
   "custom": {
-    "excludePatterns": []
+    "excludePatterns": [],
+    "cors": {
+      "allowOrigin": "*",
+      "allowHeaders": ["Content-Type", "X-Api-Key"]
+    }
   },
   "endpoints": [
     {
       "path": "/bookings/{tspId}",
-      "method": "GET",
+      "method": "DELETE",
       "type": "AWS",
       "authorizationType": "none",
-      "apiKeyRequired": false,
+      "authorizerFunction": false,
       "requestParameters": {
         "integration.request.path.tspId": "method.request.path.tspId"
       },
