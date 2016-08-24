@@ -1,0 +1,26 @@
+{
+  "leg": {
+    "mode": "BICYCLE",
+    "from": {
+      "lat": 60.1724529,
+      "lon": 24.9386306
+    },
+    "to": {
+      "lat": 60.1724529,
+      "lon": 24.9386306
+    },
+    "startTime": 1474880046000,
+    "endTime": 1474880470000
+  },
+  "meta": {
+    "MODE_BICYCLE": {
+    },
+    "identifier": "fec75e528ae791012977771a95347a1e"
+  },
+  "customer": {
+    "firstName": "Jane",
+    "lastName": "Maas",
+    "phone": "010 2345678",
+    "email": "jane.maas@example.com"
+  }
+}

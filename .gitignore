@@ -38,6 +38,12 @@ node_modules
 #SERVERLESS
 admin.env
 .env
-
-#Ignore syncable configs from the _meta folder
+_meta/_tmp
 _meta/variables/s-variables-dev.json
+_meta/variables/s-variables-prod.json
+_serverless_handler.js
+
+#VIM STUFF
+*.swp
+
+#Ignore _meta folder
