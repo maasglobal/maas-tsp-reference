@@ -6,16 +6,16 @@ This guide assumes that readers are familiar with basic JavaScript (ES6) and Nod
 
 ## Table of Contents
 
-1. [How a TSP works](#How-a-TSP-works)
-2. [Architecture](#Architecture)
-    * [Directory structure](#Directory-structure)
-    * [Environment variables](#Environment-variables)
-    * [Naming conventions](#Naming-conventions)
-3. [Schemas](#Schemas)
-4. [Implementing a TSP](#Implementing-a-TSP)
-5. [Tests](#Tests)
-    * [Functional tests](#Functional-tests)
-    * [Unit tests & schema based validation](#Unit-tests-&-schema-based-validation)
+1. [How a TSP works](#how-a-tsp-works)
+2. [Architecture](#architecture)
+    * [Directory structure](#directory-structure)
+    * [Environment variables](#environment-variables)
+    * [Naming conventions](#naming-conventions)
+3. [Schemas](#schemas)
+4. [Implementing a TSP](#implementing-a-tsp)
+5. [Tests](#tests)
+    * [Functional tests](#functional-tests)
+    * [Unit tests & schema based validation](#unit-tests-schema-based-validation)
 
 
 ## How a TSP works
