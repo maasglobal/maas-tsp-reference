@@ -94,15 +94,28 @@ The `lib` -directory is used here to store all implementation that is specific t
 
 NOTE: *Citybikes does not handle reservations of bikes, so a mocked db (JSON -file) is used here as an example to return data that would otherwise not be available.*
 
+##### Dependencies
 `package.json` and `node_modules` include your dependencies and are used by the Serverless Framework to build and bundle your final functions during deployment into AWS. It is important to keep your dependencies to a minimum and use as much native code as possible. A good library for handling HTTP -requests using promises is [request-promise-lite](https://github.com/laurisvan/request-promise-lite), which is used by many of the current TSPs.
 
 ### Environment variables
+All 3rd party related API -keys should be documented in the repository's README.md -file. Actual keys MUST NOT be committed into the repository, but used from a local environment variable. For development purposes it is up to the developer to handle those, and document the necessary ones properly for final developments. Transferring production keys towards MaaS can be done by a separate communication channel e.g. GPG encrypted emails.
+
+Handling environment variables for multiple developers can be done by using the [Serverless Meta Sync -plugin](https://github.com/serverless/serverless-meta-sync)
 
 ### Naming conventions
+Use nouns instead of verbs, Plurals instead of singular. snake-case in URI and path params, query string attributes in camelCase due to request mapping inside AWS API-Gateway.
+
+##### Linting
+ESLint is used for linting the entire codebase. A set of rules that must pass comes with this repository. The ESLint Gulp -task is run when running the test suite with `npm test`.
+
+##### Date & Time handling
+UTC+0 must be used for all date / time -related operations. [MomentJS](http://momentjs.com/timezone/) is a solid library for managing timezones and time -related operations.
 
 ## Schemas
+[JSON Schema's](http://json-schema.org/) are used for describing data structures within the system. All schemas related to a TSP are included in this repository and used for testing and ensuring a valid implementation of a TSP. A lot of the key & value -pairs come from planning a trip, and thus include keywords like "leg", "location", "lat, "lon", etc. If you peak inside the schemas, descriptions of the fields can be found there.
 
 ## Implementing a TSP
+
 
 ## Tests
 ### Functional tests
