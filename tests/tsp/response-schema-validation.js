@@ -8,32 +8,32 @@ const schemaUtils = require(path.resolve('./schemas/index.js'));
 const expect = chai.expect;
 
 const handlers = {
-  'booking-cancel': [
+  'bookings-cancel': [
     {
       agencyId: 'citybikes',
-      handler: require(path.resolve('./booking-citybikes/booking-citybikes-cancel/handler')),
-      eventData: require(path.resolve('./booking-citybikes/booking-citybikes-cancel/event.json')),
+      handler: require(path.resolve('./bookings-citybikes/bookings-citybikes-cancel/handler')),
+      eventData: require(path.resolve('./bookings-citybikes/bookings-citybikes-cancel/event.json')),
     },
   ],
-  'booking-create': [
+  'bookings-create': [
     {
       agencyId: 'citybikes',
-      handler: require(path.resolve('./booking-citybikes/booking-citybikes-create/handler')),
-      eventData: require(path.resolve('./booking-citybikes/booking-citybikes-create/event.json')),
+      handler: require(path.resolve('./bookings-citybikes/bookings-citybikes-create/handler')),
+      eventData: require(path.resolve('./bookings-citybikes/bookings-citybikes-create/event.json')),
     },
   ],
-  'booking-options-list': [
+  'bookings-options-list': [
     {
       agencyId: 'citybikes',
-      handler: require(path.resolve('./booking-citybikes/booking-citybikes-options-list/handler')),
-      eventData: require(path.resolve('./booking-citybikes/booking-citybikes-options-list/event.json')),
+      handler: require(path.resolve('./bookings-citybikes/bookings-citybikes-options-list/handler')),
+      eventData: require(path.resolve('./bookings-citybikes/bookings-citybikes-options-list/event.json')),
     },
   ],
-  'booking-read-by-id': [
+  'bookings-read-by-id': [
     {
       agencyId: 'citybikes',
-      handler: require(path.resolve('./booking-citybikes/booking-citybikes-retrieve/handler')),
-      eventData: require(path.resolve('./booking-citybikes/booking-citybikes-retrieve/event.json')),
+      handler: require(path.resolve('./bookings-citybikes/bookings-citybikes-retrieve/handler')),
+      eventData: require(path.resolve('./bookings-citybikes/bookings-citybikes-retrieve/event.json')),
     },
   ],
 };
@@ -72,18 +72,18 @@ describe('TSP adapter response validation', function () {
   };
 
   describe('cancel', () => {
-    generateTestCases('tsp:booking-cancel-response', handlers['booking-cancel']);
+    generateTestCases('tsp:booking-cancel-response', handlers['bookings-cancel']);
   });
 
   describe('create', () => {
-    generateTestCases('tsp:booking-create-response', handlers['booking-create']);
+    generateTestCases('tsp:booking-create-response', handlers['bookings-create']);
   });
 
   describe('options-list', () => {
-    generateTestCases('tsp:booking-options-list-response', handlers['booking-options-list']);
+    generateTestCases('tsp:booking-options-list-response', handlers['bookings-options-list']);
   });
 
   describe('read-by-id', () => {
-    generateTestCases('tsp:booking-read-by-id-response', handlers['booking-read-by-id']);
+    generateTestCases('tsp:booking-read-by-id-response', handlers['bookings-read-by-id']);
   });
 });
