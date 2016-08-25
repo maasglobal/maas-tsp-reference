@@ -23,9 +23,6 @@
   "bugs": {
     "url": "https://github.com/maasglobal/maas-tsp-reference/issues"
   },
-  "dependencies": {
-    "maas-tsp-schemas": "file:schemas"
-  },
   "description": "A reference implementation of a MaaS Global-TSP",
   "devDependencies": {
     "ajv": "^4.1.1",
@@ -60,7 +57,7 @@
   },
   "homepage": "https://github.com/maasglobal/maas-tsp-reference/",
   "license": "MIT",
-  "name": "MaaS Global reference TSP",
+  "name": "maas-tsp-reference",
   "optionalDependencies": {},
   "private": false,
   "repository": {
