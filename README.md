@@ -105,10 +105,10 @@ Handling environment variables for multiple developers can be done by using the 
 ### Naming conventions
 Use nouns instead of verbs, Plurals instead of singular. snake-case in URI and path params, query string attributes in camelCase due to request mapping inside AWS API-Gateway.
 
-##### Linting
+#### Linting
 ESLint is used for linting the entire codebase. A set of rules that must pass comes with this repository. The ESLint Gulp -task is run when running the test suite with `npm test`.
 
-##### Date & Time handling
+#### Date & Time handling
 UTC+0 must be used for all date / time -related operations. [MomentJS](http://momentjs.com/timezone/) is a solid library for managing timezones and time -related operations.
 
 ## Schemas
