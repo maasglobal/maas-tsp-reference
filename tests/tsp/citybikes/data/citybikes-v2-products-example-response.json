@@ -1,0 +1,119 @@
+{
+  "network": {
+    "company": [
+      "Helsinki City Transport", 
+      "Helsinki Regional Transport", 
+      "CityBikeFinland", 
+      "Smoove SAS", 
+      "Moventia", 
+      "Alepa"
+    ], 
+    "href": "/v2/networks/citybikes-helsinki", 
+    "id": "citybikes-helsinki", 
+    "location": {
+      "city": "Helsinki", 
+      "country": "FI", 
+      "latitude": 60.16985569999999, 
+      "longitude": 24.938379
+    }, 
+    "name": "City bikes", 
+    "stations": [
+      {
+        "empty_slots": 4, 
+        "extra": {
+          "uid": "A02"
+        }, 
+        "free_bikes": 8, 
+        "id": "cf95a914bb5d1f9e7bb71efc14800243", 
+        "latitude": 60.159715, 
+        "longitude": 24.955212, 
+        "name": "Laivasillankatu", 
+        "timestamp": "2016-08-06T01:41:19.390000Z"
+      }, 
+      {
+        "empty_slots": 22, 
+        "extra": {
+          "uid": "B08"
+        }, 
+        "free_bikes": 2, 
+        "id": "9a129e60f204059e7033224e79ba4816", 
+        "latitude": 60.187704, 
+        "longitude": 24.960505, 
+        "name": "S\u00f6rn\u00e4isten metroasema", 
+        "timestamp": "2016-08-06T01:41:19.424000Z"
+      }, 
+      {
+        "empty_slots": 4, 
+        "extra": {
+          "uid": "A42"
+        }, 
+        "free_bikes": 16, 
+        "id": "881dd76f5c2498c1081cad13e18be927", 
+        "latitude": 60.164159, 
+        "longitude": 24.922583, 
+        "name": "Baana", 
+        "timestamp": "2016-08-06T01:41:19.382000Z"
+      }, 
+      {
+        "empty_slots": 16, 
+        "extra": {
+          "uid": "A24"
+        }, 
+        "free_bikes": 0, 
+        "id": "b16b52e6887ac68b440b6dee587d1a15", 
+        "latitude": 60.1706, 
+        "longitude": 24.939671, 
+        "name": "Rautatientori / l\u00e4nsi", 
+        "timestamp": "2016-08-06T01:41:19.391000Z"
+      }, 
+      {
+        "empty_slots": 1, 
+        "extra": {
+          "uid": "B01"
+        }, 
+        "free_bikes": 27, 
+        "id": "38319ecf8cadc7b3c9a0c009bad1d142", 
+        "latitude": 60.178102, 
+        "longitude": 24.952391, 
+        "name": "Hakaniemen metroasema", 
+        "timestamp": "2016-08-06T01:41:19.392000Z"
+      }, 
+      {
+        "empty_slots": 1, 
+        "extra": {
+          "uid": "A03"
+        }, 
+        "free_bikes": 15, 
+        "id": "e8027c6aea5dcf7f20b844cb2ccac358", 
+        "latitude": 60.158172, 
+        "longitude": 24.944808, 
+        "name": "Kapteeninpuistikko", 
+        "timestamp": "2016-08-06T01:41:19.394000Z"
+      }, 
+      {
+        "empty_slots": 18, 
+        "extra": {
+          "uid": "A49"
+        }, 
+        "free_bikes": 14, 
+        "id": "eb73ab31cfdb1c60199e3bbaff82b1db", 
+        "latitude": 60.163535, 
+        "longitude": 24.914765, 
+        "name": "It\u00e4merentori", 
+        "timestamp": "2016-08-06T01:41:19.406000Z"
+      }, 
+      {
+        "empty_slots": 3, 
+        "extra": {
+          "uid": "B04"
+        }, 
+        "free_bikes": 17, 
+        "id": "d03a5f077dd43c3979cac9bf1cff04f7", 
+        "latitude": 60.184283, 
+        "longitude": 24.952703, 
+        "name": "Karhupuisto", 
+        "timestamp": "2016-08-06T01:41:19.408000Z"
+      }
+    ]
+  }
+}
