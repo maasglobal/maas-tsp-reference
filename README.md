@@ -14,7 +14,7 @@ This guide assumes that readers are familiar with basic JavaScript (ES6) and Nod
     * [Environment variables](#environment-variables)
     * [Naming conventions](#naming-conventions)
         * [Linting](#linting)
-        * [Date & Time handling](#date-time-handling)
+        * [Date & Time handling](#date--time-handling)
 3. [Schemas](#schemas)
 4. [Implementing a TSP](#implementing-a-tsp)
 5. [Tests](#tests)
