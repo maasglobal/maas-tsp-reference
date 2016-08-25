@@ -1,0 +1,75 @@
+{
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/sc5-serverless-boilerplate-0.0.5.tgz_1457013990650_0.77550138393417"
+  },
+  "author": {
+    "name": "Musie Kebede",
+    "email": "gizaw@neocard.fi",
+    "url": "https://github.com/moseseth"
+  },
+  "contributors": [
+    {
+      "name": "Karl Viiburg",
+      "email": "karl@neocard.fi",
+      "url": "https://github.com/DHNCarlos"
+    },
+    {
+      "name": "Tomi Niittumäki",
+      "email": "tomi@nvf.io",
+      "url": "https://github.com/Feijk"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/maasglobal/maas-tsp-reference/issues"
+  },
+  "dependencies": {
+    "maas-tsp-schemas": "file:schemas"
+  },
+  "description": "A reference implementation of a MaaS Global-TSP",
+  "devDependencies": {
+    "ajv": "^4.1.1",
+    "aws-sdk": "^2.2.39",
+    "bluebird": "^3.4.1",
+    "chai": "^3.5.0",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.9.2",
+    "eslint-plugin-jsx-a11y": "^1.5.3",
+    "eslint-plugin-react": "^5.2.2",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-json-lint": "^0.1.0",
+    "gulp-jsonlint": "^1.1.2",
+    "gulp-mocha": "^2.2.0",
+    "gulp-sequence": "^0.4.5",
+    "gulp-util": "^3.0.7",
+    "haversine": "^1.0.0",
+    "json-loader": "^0.5.4",
+    "lambda-wrapper": "0.0.6",
+    "moment": "^2.13.0",
+    "moment-timezone": "^0.5.4",
+    "serverless": "^0.5.5",
+    "serverless-cors-plugin": "^0.4.1",
+    "serverless-meta-sync": "https://github.com/serverless/serverless-meta-sync.git#c5e34a59a8665df703534ee18464d035ef30edc6",
+    "serverless-plugin-autoinstall": "^0.5.3",
+    "serverless-plugin-autoprune": "^0.5.3",
+    "serverless-plugin-function-integration-run": "^0.1.0",
+    "serverless-plugin-revision": "^0.5.6",
+    "yargs": "^4.8.0"
+  },
+  "homepage": "https://github.com/maasglobal/maas-tsp-reference/",
+  "license": "MIT",
+  "name": "MaaS Global reference TSP",
+  "optionalDependencies": {},
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maasglobal/maas-tsp-reference.git"
+  },
+  "scripts": {
+    "tspinstall": "npm install && sls function autoinstall -a",
+    "test": "gulp test"
+  },
+  "version": "0.1.0"
+}
