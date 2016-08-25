@@ -1,5 +1,6 @@
 
 # Implementing MaasGlobal Transport Service Providers (3rd Party API's)
+[MaaS](http://maas.global/maas-as-a-concept/), short for Mobility as a Service, brings all means of travel together. It combines options from different transport providers into a single mobile service, removing the hassle of planning and one-off payments. This documentation will help you implement your own TSP and get your transport service as a part of MaaS.
 
 ## Prerequisites
 This guide assumes that readers are familiar with basic JavaScript (ES6) and Node.js concepts. Knowledge about AWS Lambda or similiar serverless architectures can come in handy, but is not necessary. The Serverless Framework is used to manage deployment, handle project structure and running the Lambda -functions from a command line, so a quick peak into [the docs](https://serverless.readme.io/v0.5.0/docs) can be useful for those not familiar with the Serverless Framework. 
@@ -9,13 +10,14 @@ This guide assumes that readers are familiar with basic JavaScript (ES6) and Nod
 1. [How a TSP works](#how-a-tsp-works)
 2. [Architecture](#architecture)
     * [Directory structure](#directory-structure)
+        * [Dependencies](#dependencies)
     * [Environment variables](#environment-variables)
     * [Naming conventions](#naming-conventions)
+        * [Linting](#linting)
+        * [Date & Time handling](#date-time-handling)
 3. [Schemas](#schemas)
 4. [Implementing a TSP](#implementing-a-tsp)
 5. [Tests](#tests)
-    * [Functional tests](#functional-tests)
-    * [Unit tests & schema based validation](#unit-tests-schema-based-validation)
 
 
 ## How a TSP works
@@ -94,7 +96,7 @@ The `lib` -directory is used here to store all implementation that is specific t
 
 NOTE: *Citybikes does not handle reservations of bikes, so a mocked db (JSON -file) is used here as an example to return data that would otherwise not be available.*
 
-##### Dependencies
+#### Dependencies
 `package.json` and `node_modules` include your dependencies and are used by the Serverless Framework to build and bundle your final functions during deployment into AWS. It is important to keep your dependencies to a minimum and use as much native code as possible. A good library for handling HTTP -requests using promises is [request-promise-lite](https://github.com/laurisvan/request-promise-lite), which is used by many of the current TSPs.
 
 ### Environment variables
@@ -105,10 +107,10 @@ Handling environment variables for multiple developers can be done by using the 
 ### Naming conventions
 Use nouns instead of verbs, Plurals instead of singular. snake-case in URI and path params, query string attributes in camelCase due to request mapping inside AWS API-Gateway.
 
-#### Linting
+##### Linting
 ESLint is used for linting the entire codebase. A set of rules that must pass comes with this repository. The ESLint Gulp -task is run when running the test suite with `npm test`.
 
-#### Date & Time handling
+##### Date & Time handling
 UTC+0 must be used for all date / time -related operations. [MomentJS](http://momentjs.com/timezone/) is a solid library for managing timezones and time -related operations.
 
 ## Schemas
@@ -118,6 +120,4 @@ UTC+0 must be used for all date / time -related operations. [MomentJS](http://mo
 
 
 ## Tests
-### Functional tests
-### Unit tests (schema based validation)
-### 3rd party API tests with mocked endpoint data?
+A test suite based on JSON schemas is provided as a starting point to validate a new TSP's functionality and compatibility with MaaS Core. These are the rudimentary, while also mandatory, tests that all TSPs should have in place. It is strongly encouraged to write additional tests to enhance test coverage. Critical parts, such as time based decision algorithms and filtering functions should have at least one test / function. By default, the libraries [MochaJS](https://mochajs.org/) and [ChaiJS](http://chaijs.com/) are used for writing tests.
