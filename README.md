@@ -118,6 +118,11 @@ UTC+0 must be used for all date / time -related operations. [MomentJS](http://mo
 
 ## Implementing a TSP
 
+1. Fork this repository
+2. Clone the forked copy
+3. run `npm run tspinstall`
+4. run `npm test` to verify it's working
+5. Implement your own TSP and write tests to verify its implementation
 
 ## Tests
 A test suite based on JSON schemas is provided as a starting point to validate a new TSP's functionality and compatibility with MaaS Core. These are the rudimentary, while also mandatory, tests that all TSPs should have in place. It is strongly encouraged to write additional tests to enhance test coverage. Critical parts, such as time based decision algorithms and filtering functions should have at least one test / function. By default, the libraries [MochaJS](https://mochajs.org/) and [ChaiJS](http://chaijs.com/) are used for writing tests. Plugging the testsuite included in this reference implementation to your own implementation should be fairly straightforward.
