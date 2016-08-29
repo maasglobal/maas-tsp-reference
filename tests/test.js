@@ -26,5 +26,6 @@ process.env.maas_test_run = true;
 describe('MaaS Transport Service Providers', () => {
   require('./tsp/index.js');
   require('./tsp/response-schema-validation.js');
+  require('./tsp/api-validation.js');
   // require('./tsp/booking-process-test.js');
 });

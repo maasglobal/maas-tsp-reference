@@ -19,11 +19,11 @@ const validateEventData = event => (
     };
 
     if (parsed.leg.mode !== 'BICYCLE') {
-      return reject(new Error(`400: "mode" should be "BICYCLE", got ${event.mode}`));
+      return reject(new Error(`400: "mode" should be "BICYCLE", got ${parsed.leg.mode}`));
     }
 
     if (!validateCoordinates(parsed.leg.from)) {
-      return reject(new Error(`400: "from" should be valid coordinates, got ${event.from}`));
+      return reject(new Error(`400: "from" should be valid coordinates, got ${parsed.leg.from}`));
     }
 
     return resolve(parsed);

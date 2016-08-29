@@ -48,6 +48,7 @@
     "lambda-wrapper": "0.0.6",
     "moment": "^2.13.0",
     "moment-timezone": "^0.5.4",
+    "request-promise-lite": "^0.6.0",
     "serverless": "^0.5.5",
     "serverless-cors-plugin": "^0.4.1",
     "serverless-meta-sync": "https://github.com/serverless/serverless-meta-sync.git#c5e34a59a8665df703534ee18464d035ef30edc6",

@@ -63,6 +63,7 @@ gulp.task('mocha', () => {
     .pipe(gmocha({ grep: argv.grep }))
     .on('error', error => {
       gutil.log(error);
+      localServer.kill('SIGTERM');
       process.exit(1);
     });
 });

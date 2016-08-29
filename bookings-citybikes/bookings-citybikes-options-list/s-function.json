@@ -29,10 +29,10 @@
       "requestBody": [],
       "requestParameters": {
         "integration.request.querystring.mode": "method.request.querystring.mode",
-        "integration.request.querystring.from_lat": "method.request.querystring.from_lat",
-        "integration.request.querystring.from_lon": "method.request.querystring.from_lon",
-        "integration.request.querystring.from_lat": "method.request.querystring.to_lat",
-        "integration.request.querystring.from_lon": "method.request.querystring.to_lon",
+        "integration.request.querystring.fromLat": "method.request.querystring.fromLat",
+        "integration.request.querystring.fromLon": "method.request.querystring.fromLon",
+        "integration.request.querystring.toLat": "method.request.querystring.toLat",
+        "integration.request.querystring.toLon": "method.request.querystring.toLon",
         "integration.request.querystring.startTime": "method.request.querystring.startTime",
         "integration.request.querystring.endTime": "method.request.querystring.endTime"
       },
@@ -40,12 +40,12 @@
         "application/json": {
           "mode": "$input.params('mode')",
           "from": {
-            "lat": "$input.params('from_lat')",
-            "lon": "$input.params('from_lon')"
+            "lat": "$input.params('fromLat')",
+            "lon": "$input.params('fromLon')"
           },
           "to": {
-            "lat": "$input.params('to_lat')",
-            "lon": "$input.params('to_lon')"
+            "lat": "$input.params('toLat')",
+            "lon": "$input.params('toLon')"
           },
           "startTime": "$input.params('startTime')",
           "endTime": "$input.params('endTime')"
