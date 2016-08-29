@@ -1,10 +1,5 @@
 {
   "name": "MaaS-TSP-reference",
-  "version": "0.1.0",
-  "profile": "serverless-v0.5.5",
-  "location": "https://github.com/maasglobal/maas-tsp-reference/",
-  "author": "Tomi Niittumäki",
-  "description": "MaaS Serverless TSP reference implementation",
   "custom": {
     "meta": {
       "name": "maas-tsp-reference",
@@ -16,6 +11,12 @@
     "serverless-plugin-autoprune",
     "serverless-meta-sync",
     "serverless-plugin-function-integration-run",
-    "serverless-plugin-autoinstall"
-  ]
+    "serverless-plugin-autoinstall",
+    "serverless-offline"
+  ],
+  "version": "0.1.0",
+  "profile": "serverless-v0.5.5",
+  "location": "https://github.com/maasglobal/maas-tsp-reference/",
+  "author": "Tomi Niittumäki",
+  "description": "MaaS Serverless TSP reference implementation"
 }

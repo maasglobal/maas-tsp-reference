@@ -6,6 +6,5 @@
       "customer": "$input.json('$.customer')"
     }
   },
-  "environment": {
-  }
+  "environment": {}
 }
