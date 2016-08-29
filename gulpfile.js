@@ -69,6 +69,6 @@ gulp.task('mocha', () => {
 
 gulp.task('validate', ['jsonclint', 'jsonlint', 'eslint']);
 
-gulp.task('test', ['serverStart'], gulpSequence('validate', 'mocha', 'serverStop'));
+gulp.task('test', ['validate'], gulpSequence('serverStart', 'mocha', 'serverStop'));
 
 gulp.task('default');
