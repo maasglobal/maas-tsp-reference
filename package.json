@@ -52,7 +52,7 @@
     "serverless": "^0.5.5",
     "serverless-cors-plugin": "^0.4.1",
     "serverless-meta-sync": "https://github.com/serverless/serverless-meta-sync.git#c5e34a59a8665df703534ee18464d035ef30edc6",
-    "serverless-offline": "^2.8.3",
+    "serverless-offline": "git://github.com/Feijk/serverless-offline.git",
     "serverless-plugin-autoinstall": "^0.5.3",
     "serverless-plugin-autoprune": "^0.5.3",
     "serverless-plugin-function-integration-run": "^0.1.0",

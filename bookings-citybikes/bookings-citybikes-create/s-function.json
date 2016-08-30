@@ -26,7 +26,6 @@
       "authorizationType": "none",
       "authorizerFunction": false,
       "apiKeyRequired": true,
-      "requestParameters": {},
       "requestTemplates": "$${tspAdapterCreateRequestTemplate}",
       "responses": {
         "^400.*": {

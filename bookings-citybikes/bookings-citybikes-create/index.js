@@ -13,11 +13,10 @@ const validateEventData = event => (
   new Promise((resolve, reject) => {
     const parsed = {
       leg: event.leg,
-      meta: event.from,
+      meta: event.meta,
       // API Gateway gives even undefined values as strings
       customer: event.customer,
     };
-
     if (parsed.leg.mode !== 'BICYCLE') {
       return reject(new Error(`400: "mode" should be "BICYCLE", got ${parsed.leg.mode}`));
     }
