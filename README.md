@@ -23,6 +23,7 @@ This guide assumes that for this reference implementation, readers are familiar 
 ## How a TSP works
 
 A TSP, short for Transport Service Provider, is a service that exposes a unified REST-API towards MaaS Core, and handles the transformations of requests and responses from a specific 3rd party API; e.g. Uber or Citybikes.
+
 ```
 +----------+      +-------------+      +---------+      +-----------+
 |          |      |             |      |         |      |           |
@@ -42,6 +43,7 @@ All TSP's are currently deployed into AWS as Lambda functions, combined with the
 
 ### Directory structure
 This is an example directory structure for implementing a TSP using the Serverless Framework. Your project should have one directory containing the mandatory functions. Each function and its assets (such as s-function.js) should reside inside its own directory correspondingly. This directory is the one that will be deployed into AWS as a single bundled Lambda -function. Stuff outside of this directory is mainly for your own project setup and development purposes, **except** for `tests` and `schemas` -directories, which are used for the validation of your implementation. Here is an example tree of a single TSP using the Serverless Framework:
+
 ```
 bookings-citybikes/
 |-- bookings-citybikes-cancel
@@ -120,9 +122,17 @@ UTC+0 must be used for all date / time -related operations. [MomentJS](http://mo
 
 1. Fork this repository
 2. Clone the forked copy
+    * In your local copy inside the `./meta/variables` directory create a file named `s-variables-dev.json` with the contents 
+    ```JSON
+    {
+      "stage": "dev"
+    }
+    ```
 3. run `npm run tspinstall`
 4. run `npm test` to verify it's working
 5. Implement your own TSP and write tests to verify its implementation
+
+The test command will run all the tests for the project, including starting a local server on port 3000 emulating AWS API - Gateway based on your `s-function.js`files, and then running TSP API tests. The emulator can be run separately for development purposes with `sls offline start`. For a full Swagger -based documentation of the TSP API [see here](http://maasglobal.github.io/maas-tsp-api/)
 
 ## Tests
 A test suite based on JSON schemas is provided as a starting point to validate a new TSP's functionality and compatibility with MaaS Core. These are the rudimentary, while also mandatory, tests that all TSPs should have in place. It is strongly encouraged to write additional tests to enhance test coverage. Critical parts, such as time based decision algorithms and filtering functions should have at least one test / function. By default, the libraries [MochaJS](https://mochajs.org/) and [ChaiJS](http://chaijs.com/) are used for writing tests. Plugging the testsuite included in this reference implementation to your own implementation should be fairly straightforward.

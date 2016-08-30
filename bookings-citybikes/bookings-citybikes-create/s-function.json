@@ -47,7 +47,7 @@
             "method.response.header.Access-Control-Allow-Origin": "'*'"
           }
         },
-        "[^0-9].*": {
+        "^\\d{3}.*": {
           "statusCode": "500",
           "responseParameters": {
             "method.response.header.Access-Control-Allow-Origin": "'*'"
