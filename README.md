@@ -38,7 +38,7 @@ TSP's are stateless, and can be seen as a collection of mapping / filtering func
 
 
 ## Architecture
-All TSP's are currently deployed into AWS as Lambda functions, combined with their respective API Gateway endpoint definitions. All AWS -related data can be found inside the s-function.json -file for each function. More information about the file's structure and how the Serverless Framework works can be found [here](https://serverless.readme.io/v0.5.0/docs). The example TSP provided in this repository contains all the mandatory functions / endpoints for a simple TSP. The required functions can be interpreted as a collection of CRUD(L) -functions, where each function does one thing and returns an expected result/error. Finally, a TSP needs to expose a REST -API according to this [specification](https://github.com/maasglobal/maas-tsp-api).
+All TSP's are currently deployed into AWS as Lambda functions, combined with their respective API Gateway endpoint definitions. All AWS -related data can be found inside the s-function.json -file for each function. More information about the file's structure and how the Serverless Framework works can be found [here](https://serverless.readme.io/v0.5.0/docs). The example TSP provided in this repository contains all the mandatory functions / endpoints for a simple TSP. The required functions can be interpreted as a collection of CRUD(L) -functions, where each function does one thing and returns an expected result/error. Finally, a TSP needs to expose a REST -API according to this [specification](https://github.com/maasglobal/maas-tsp-api). **NOTE: This specification is still in progress and will be updated later. For now the safest option is to look at the schemas found in this project**
 
 
 ### Directory structure
