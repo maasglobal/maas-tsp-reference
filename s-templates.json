@@ -1,0 +1,10 @@
+{
+  "tspAdapterCreateRequestTemplate": {
+    "application/json": {
+      "leg": "$input.json('$.leg')",
+      "meta": "$input.json('$.meta')",
+      "customer": "$input.json('$.customer')"
+    }
+  },
+  "environment": {}
+}

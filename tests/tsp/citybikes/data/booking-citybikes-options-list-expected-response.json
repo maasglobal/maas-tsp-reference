@@ -1,0 +1,31 @@
+{
+  "options": [
+    {
+      "leg": {
+        "agencyId": "citybikes",
+        "mode": "BICYCLE",
+        "startTime": null,
+        "endTime": null,
+        "from": {
+          "lat": 60.3210549,
+          "lon": 24.9506771
+        },
+        "to": {
+          "lat": 60.1691569,
+          "lon": 24.931039
+        }
+      },
+      "meta": {
+        "identifier": "cf95a914bb5d1f9e7bb71efc14800243",
+        "name": "citybikes",
+        "description": "citybikes",
+        "MODE_BICYCLE": {}
+      },
+      "terms": {
+        "price": {
+          "amount": 1.50
+        }
+      }
+    }
+  ]
+}

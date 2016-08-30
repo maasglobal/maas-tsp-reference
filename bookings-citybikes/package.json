@@ -1,0 +1,17 @@
+{
+  "name": "booking-uber",
+  "version": "0.0.1",
+  "description": "Serverless module dependencies for MaasGlobal's Citybikes TSP",
+  "author": "nanuuki & feijk",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/"
+  },
+  "keywords": [],
+  "devDependencies": {},
+  "dependencies": {
+    "request-promise-lite": "^0.6.0"
+  }
+}

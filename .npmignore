@@ -28,22 +28,14 @@ build/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 
-#IDE
+#IDE Stuff
 **/.idea
 
-#OS
+#OS STUFF
 .DS_Store
 .tmp
 
-#SERVERLESS
+#SERVERLESS STUFF
 admin.env
 .env
-_meta/_tmp
-_meta/variables/s-variables-dev.json
-_meta/variables/s-variables-prod.json
-_serverless_handler.js
-
-#VIM STUFF
-*.swp
-
-#Ignore _meta folder
+_meta

@@ -1,0 +1,95 @@
+{
+  "name": "booking-citybikes-options-list",
+  "runtime": "nodejs4.3",
+  "description": "Serverless Lambda function for project: MaaS-transport Citybikes TSP",
+  "customName": false,
+  "customRole": false,
+  "handler": "booking-citybikes-options-list/handler.handler",
+  "timeout": 30,
+  "memorySize": 1024,
+  "authorizer": {},
+  "custom": {
+    "excludePatterns": [],
+    "cors": {
+      "allowOrigin": "*",
+      "allowHeaders": [
+        "Content-Type",
+        "X-Api-Key"
+      ]
+    }
+  },
+  "endpoints": [
+    {
+      "path": "/citybikes/bookings/options",
+      "method": "GET",
+      "type": "AWS",
+      "authorizationType": "none",
+      "authorizerFunction": false,
+      "apiKeyRequired": true,
+      "requestBody": [],
+      "requestParameters": {
+        "integration.request.querystring.mode": "method.request.querystring.mode",
+        "integration.request.querystring.fromLat": "method.request.querystring.fromLat",
+        "integration.request.querystring.fromLon": "method.request.querystring.fromLon",
+        "integration.request.querystring.toLat": "method.request.querystring.toLat",
+        "integration.request.querystring.toLon": "method.request.querystring.toLon",
+        "integration.request.querystring.startTime": "method.request.querystring.startTime",
+        "integration.request.querystring.endTime": "method.request.querystring.endTime"
+      },
+      "requestTemplates": {
+        "application/json": {
+          "mode": "$input.params('mode')",
+          "from": {
+            "lat": "$input.params('fromLat')",
+            "lon": "$input.params('fromLon')"
+          },
+          "to": {
+            "lat": "$input.params('toLat')",
+            "lon": "$input.params('toLon')"
+          },
+          "startTime": "$input.params('startTime')",
+          "endTime": "$input.params('endTime')"
+        }
+      },
+      "responses": {
+        "^400.*": {
+          "statusCode": "400",
+          "responseParameters": {
+            "method.response.header.Access-Control-Allow-Origin": "'*'"
+          }
+        },
+        "^401.*": {
+          "statusCode": "401",
+          "responseParameters": {
+            "method.response.header.Access-Control-Allow-Origin": "'*'"
+          }
+        },
+        "^404.*": {
+          "statusCode": "404",
+          "responseParameters": {
+            "method.response.header.Access-Control-Allow-Origin": "'*'"
+          }
+        },
+        "^\\d{3}.*": {
+          "statusCode": "500",
+          "responseParameters": {
+            "method.response.header.Access-Control-Allow-Origin": "'*'"
+          }
+        },
+        "default": {
+          "statusCode": "200",
+          "responseParameters": {
+            "method.response.header.Access-Control-Allow-Origin": "'*'"
+          },
+          "responseModels": {},
+          "responseTemplates": {
+            "application/json": ""
+          }
+        }
+      },
+      "requestBody": []
+    }
+  ],
+  "events": [],
+  "environment": "$${environment}"
+}
