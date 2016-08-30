@@ -107,18 +107,10 @@ function formatResponse(offers, parsedRequest) {
  */
 const optionsList = (event, callback) => {
   return validateEventData(event)
-    .then(event => {
-      return citybikesAPI.networks();
-    })
-    .then(results => {
-      return findNearestNetwork(results, event.from);
-    })
-    .then(closestNetwork => {
-      return citybikesAPI.products(closestNetwork);
-    })
-    .then(availableNetwork => {
-      return formatResponse(availableNetwork.network.stations, event);
-    })
+    .then(event => citybikesAPI.networks())
+    .then(results => findNearestNetwork(results, event.from))
+    .then(closestNetwork => citybikesAPI.products(closestNetwork))
+    .then(availableNetwork => formatResponse(availableNetwork.network.stations, event))
     .then(result => callback(null, result))
     .catch(error => callback(error));
 };

@@ -67,12 +67,8 @@ function formatResponse(reservation, parsedRequest) {
  */
 const create = (event, callback) => {
   return validateEventData(event)
-    .then(event => {
-      return citybikesAPI.create(event.customer.phone);
-    })
-    .then(userAndPIN => {
-      return formatResponse(userAndPIN, event);
-    })
+    .then(event => citybikesAPI.create(event.customer.phone))
+    .then(userAndPIN => formatResponse(userAndPIN, event))
     .then(result => callback(null, result))
     .catch(error => callback(error));
 };

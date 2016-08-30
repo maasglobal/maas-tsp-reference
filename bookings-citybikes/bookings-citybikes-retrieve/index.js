@@ -67,9 +67,7 @@ function formatResponse(event) {
  */
 const retrieve = (event, callback) => {
   return validateEventData(event)
-    .then(validatedEvent => {
-      return formatResponse(validatedEvent);
-    })
+    .then(validatedEvent => formatResponse(validatedEvent))
     .then(result => callback(null, result))
     .catch(error => callback(error));
 };
